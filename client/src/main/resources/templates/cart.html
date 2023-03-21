@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+</head>
+<body>
+    <h2> Cart</h2>
+
+    <div class="row">
+        <div th:each="product : ${products}" class="col-md-4 my-1">
+            <a th:href="@{|/product-detail/${product.id}|}" >
+                <img th:src="${product.illustration}"  class="card-img-top" />
+                <p th:text= "${product.name}"></p>
+                <p th:text= "${product.price}">$</p>
+                <p th:text= "${product.description}"> </p>
+                <p th:text= "${product.quantity}"> quantites</p>
+
+            </a>
+        </div>
+    </div>
+
+    <div class="">
+        <table>
+            <tr>
+                <td>Totale</td>
+                <td><span th:text="${totalPrice}"></span>€</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="button-page">
+        <a href="/" >Retour</a>
+        <a th:href="@{/order/1}" >Commander</a>
+    </div>
+
+
+</body>
+</html>

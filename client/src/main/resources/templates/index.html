@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osiris-technologie</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="/images/logo.jpg" width="125px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="@{|product-detail|}">Products</a></li>
+                    <li><a href="/mon-panier">My Cart</a></li>
+                    <li><a href="/mes-commandes">Orders</a></li>
+                </ul>
+            </nav>
+            <img src="/images/cart.jpg" width="30px" height="30px">
+            <img src="/images/menu.png" class="menu-icon" onclick="menutoggle()">
+
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <h1> Bienvenue sur <br> Osiris-technologie</h1>
+                <p>Sur notre boutique en ligne, nous mettons à votre disposition, une variété de produit et
+                    informatiques (logiciels et équipements).</p>
+                <a href="/all-products" class="btn"> Shop Now &#8594;</a>
+            </div>
+            <div class="col-2">
+                <img src="/images/arduino.jpg">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--------featured category--------->
+<div class="categories">
+    <div class="small-container">
+        <h2 class="title">Nos Partenaires</h2>
+        <div class="row">
+            <div class="col-3">
+                <img src="/images/uca-logo.png">
+            </div>
+            <div class="col-3">
+                <img src="/images/mbds-logo.jpg">
+            </div>
+            <div class="col-3">
+                <img src="/images/genie.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+<!---------brands---------->
+<div class="brands">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-5">
+                <img src="/images/image1.jpg">
+            </div>
+            <div class="col-5">
+                <img src="/images/uca-logo.png">
+            </div>
+            <div class="col-5">
+                <img src="/images/mbds-logo.jpg">
+            </div>
+            <div class="col-5">
+                <img src="/images/genie.jpg">
+            </div>
+            <div class="col-5">
+                <img src="/images/genie.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------footer---------->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+
+            </div>
+            <div class="footer-col-2">
+                <img src="/images/image1.jpg">
+            </div>
+            <div class="footer-col-3">
+                <h3>Contexte</h3>
+                <p>Projet académique développé dans le cadre du cursus MDBS au sein de l'université de Côte d'Azur.</p>
+            </div>
+            <div class="footer-col-4">
+                <h3>Nous suivre:</h3>
+                <ul>
+                    <a href="#"><li>Facebook</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <p class="copyright">Copyright 2022_MACKPAYEN_Prince_M2_MBDS </p>
+</div>
+
+<!--------js for toggle menu---------->
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px"){
+            MenuItems.style.maxHeight = "200px";
+        }
+        else{
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+
+</script>
+
+</body>
+</html>

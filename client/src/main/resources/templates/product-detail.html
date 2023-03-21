@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Product Detail</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css} "/>
+    <link th:rel="stylesheet" th:href= "@{/css/product-detail.css}">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 my-1">
+            <img th:src="${productInstance.illustration}"  class="imgProduct" />
+            <p th:text= "${productInstance.name}"></p>
+            <p th:text= "${productInstance.price}"></p>
+            <a th:href="@{|/cart/1/product/${productInstance.id}|}" class="u-btn u-button-style u-hover-black u-palette-3-base u-product-control u-text-black u-text-hover-white u-btn-1"><!--product_button_content-->Add to Cart<!--/product_button_content--></a>
+        </div>
+    </div>
+   <!-- <section class="u-align-center u-clearfix u-section-2" id="carousel_4e04">
+        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">&lt;!&ndash;product&ndash;&gt;&lt;!&ndash;product_options_json&ndash;&gt;&lt;!&ndash;{"source":""}&ndash;&gt;&lt;!&ndash;/product_options_json&ndash;&gt;&lt;!&ndash;product_item&ndash;&gt;
+            <div class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-container-style u-expanded-width u-product u-white u-product-1">
+                <div class="u-container-layout u-container-layout-1">&lt;!&ndash;product_image&ndash;&gt;
+                    <img src="//images01.nicepage.com/a1389d7bc73adea1e1c1fb7e/b02a19953a075f48964330e1/pexels-photo-4019469.jpeg" alt="" class="u-image u-image-default u-product-control u-image-1" data-image-width="1000" data-image-height="1500">&lt;!&ndash;/product_image&ndash;&gt;
+                    <div class="u-align-center u-container-style u-grey-5 u-group u-shape-rectangle u-group-1">
+                        <div class="u-container-layout u-container-layout-2">&lt;!&ndash;product_price&ndash;&gt;
+                            <div class="u-product-control u-product-price u-product-price-1">
+                                <div class="u-price-wrapper u-spacing-10">&lt;!&ndash;product_old_price&ndash;&gt;
+                                    <div class="u-hide-price u-old-price" style="text-decoration: line-through !important;" wfd-invisible="true">&lt;!&ndash;product_old_price_content&ndash;&gt;$12&lt;!&ndash;/product_old_price_content&ndash;&gt;</div>&lt;!&ndash;/product_old_price&ndash;&gt;&lt;!&ndash;product_regular_price&ndash;&gt;
+                                    <div class="u-price" style="font-size: 3rem; font-weight: 700;">&lt;!&ndash;product_regular_price_content&ndash;&gt;$9.95&lt;!&ndash;/product_regular_price_content&ndash;&gt;</div>&lt;!&ndash;/product_regular_price&ndash;&gt;
+                                </div>
+                            </div>&lt;!&ndash;/product_price&ndash;&gt;&lt;!&ndash;product_title&ndash;&gt;
+                            <h2 class="u-product-control u-text u-text-1">
+                                <a class="u-product-title-link" href="#">&lt;!&ndash;product_title_content&ndash;&gt;Sample Product&lt;!&ndash;/product_title_content&ndash;&gt;</a>
+                            </h2>&lt;!&ndash;/product_title&ndash;&gt;&lt;!&ndash;product_content&ndash;&gt;
+                            <div class="u-product-control u-product-desc u-text u-text-2">&lt;!&ndash;product_content_content&ndash;&gt;
+                                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>&lt;!&ndash;/product_content_content&ndash;&gt;
+                            </div>&lt;!&ndash;/product_content&ndash;&gt;&lt;!&ndash;product_button&ndash;&gt;&lt;!&ndash;options_json&ndash;&gt;&lt;!&ndash;{"clickType":"add-to-cart","content":""}&ndash;&gt;&lt;!&ndash;/options_json&ndash;&gt;
+                            <a href="#" class="u-btn u-button-style u-hover-black u-palette-3-base u-product-control u-text-black u-text-hover-white u-btn-1">&lt;!&ndash;product_button_content&ndash;&gt;Add to Cart&lt;!&ndash;/product_button_content&ndash;&gt;</a>&lt;!&ndash;/product_button&ndash;&gt;
+                        </div>
+                    </div>
+                </div>
+            </div>&lt;!&ndash;/product_item&ndash;&gt;&lt;!&ndash;/product&ndash;&gt;
+        </div>
+    </section>-->
+</div>
+</body>
+</html>
